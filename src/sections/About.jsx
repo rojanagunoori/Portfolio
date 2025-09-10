@@ -2,7 +2,7 @@ import { useRef } from "react";
 import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
-import { Frameworks } from "../components/FrameWorks";
+import { Frameworks } from "../components/Frameworks";
 
 const About = () => {
   const grid2Container = useRef();
@@ -17,10 +17,16 @@ const About = () => {
             className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
           <div className="z-10">
-            <p className="headtext">Hi, I'm Ali Sanati</p>
+            <p className="headtext">Hi, I'm Roja Nagunoori</p>
             <p className="subtext">
-              Over the last 4 years, I developed my frontend and backend dev
-              skills to deliver dynamic and software and web applications.
+              I’m a <strong>MERN Stack Developer</strong> with hands-on experience
+              building scalable applications during my internship at DGTLmart
+              Technologies. I’ve worked on projects ranging from real-time social
+              platforms to AI-powered interview systems, using tools like{" "}
+              <strong>React.js, Node.js, MongoDB, Firebase, and Python</strong>.
+              Passionate about problem-solving and clean design principles, I’m
+              open to both onsite and remote opportunities where I can contribute
+              and grow.
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
@@ -61,17 +67,17 @@ const About = () => {
             />
             <Card
               style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/csharp-pink.png"
+              image="assets/logos/react.png"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-45deg", top: "70%", left: "25%" }}
-              image="assets/logos/dotnet-pink.png"
+              image="assets/logos/javascript.png"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/blazor-pink.png"
+              image="assets/logos/python.png"
               containerRef={grid2Container}
             />
           </div>
@@ -79,9 +85,10 @@ const About = () => {
         {/* Grid 3 */}
         <div className="grid-black-color grid-3">
           <div className="z-10 w-[50%]">
-            <p className="headtext">Time Zone</p>
+          <p className="headtext">Location</p>
             <p className="subtext">
-              I'm based in Mars, and open to remote work worldwide
+              I’m based in <strong>Hyderabad, India</strong>, and open to
+              collaborating on opportunities worldwide.
             </p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
@@ -102,9 +109,18 @@ const About = () => {
           <div className="z-10 w-[50%]">
             <p className="headText">Teck Stack</p>
             <p className="subtext">
-              I specialize in a variety of languages, frameworks, and tools taht
-              allow me to build robust and scalable applications
-            </p>
+  I specialize in building robust and scalable applications using modern 
+  technologies. My expertise covers:
+  <br /><br />
+  <strong>Frontend:</strong> React.js, Vite, Tailwind CSS, Bootstrap <br />
+  <strong>Backend:</strong> Node.js, Express.js, MongoDB, Firebase, SQLite3 <br />
+  <strong>AI/ML:</strong> Python, Streamlit, Gemini API <br />
+  <strong>Tools:</strong> JWT, Socket.IO, Git/GitHub, Vercel, Netlify, 
+  Firebase Hosting, Render
+  <br /><br />
+  I’m also adaptable and can quickly learn and work with 
+  <strong>any language or framework</strong> to meet project requirements.
+</p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
             <Frameworks />

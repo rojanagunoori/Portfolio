@@ -1,32 +1,27 @@
 import { twMerge } from "tailwind-merge";
 import Marquee from "../components/Marquee";
 import { reviews } from "../constants";
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
+import { education } from "../constants";
+const firstRow = education.slice(0, education.length / 2);
+const secondRow = education.slice(education.length / 2);
 
-const ReviewCard = ({ img, name, username, body }) => {
+const EducationCard = ({ institution, degree, date, grade }) => {
   return (
     <figure
       className={twMerge(
-        "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4 border-gray-50/[.1] bg-gradient-to-r bg-indigo to-storm hover:bg-royal hover-animation"
+        "relative h-full w-72 cursor-pointer overflow-hidden rounded-xl border p-4 border-gray-50/[.1] bg-gradient-to-r from-indigo-900 to-storm hover:from-purple-800 hover:to-indigo-700 hover-animation"
       )}
     >
-      <div className="flex flex-row items-center gap-2">
-        <img
-          className="rounded-full bg-white/10"
-          width="32"
-          height="32"
-          alt=""
-          src={img}
-        />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium text-white/40">{username}</p>
-        </div>
+      <div className="flex flex-col">
+        <figcaption className="text-base font-semibold text-white">
+          {institution}
+        </figcaption>
+        <p className="text-sm text-gray-300">{degree}</p>
+        <p className="text-xs text-gray-400">{date}</p>
+        <blockquote className="mt-2 text-sm text-lavender">
+          Grade: {grade}
+        </blockquote>
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
     </figure>
   );
 };
@@ -34,16 +29,16 @@ const ReviewCard = ({ img, name, username, body }) => {
 export default function Testimonial() {
   return (
     <div className="items-start mt-25 md:mt-35 c-space">
-      <h2 className="text-heading">Hear From My Clients</h2>
+      <h2 className="text-heading">My Education</h2>
       <div className="relative flex flex-col items-center justify-center w-full mt-12 overflow-hidden">
         <Marquee pauseOnHover className="[--duration:20s]">
-          {firstRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
+          {firstRow.map((edu, idx) => (
+            <EducationCard key={idx} {...edu} />
           ))}
         </Marquee>
         <Marquee reverse pauseOnHover className="[--duration:20s]">
-          {secondRow.map((review) => (
-            <ReviewCard key={review.username} {...review} />
+          {secondRow.map((edu, idx) => (
+            <EducationCard key={idx} {...edu} />
           ))}
         </Marquee>
         <div className="absolute inset-y-0 left-0 w-1/4 pointer-events-none bg-gradient-to-r from-primary"></div>
