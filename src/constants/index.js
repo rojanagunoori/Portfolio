@@ -257,6 +257,11 @@ export const mySocials = [
     href: "https://www.instagram.com",
     icon: "/assets/socials/instagram.svg",
   },
+  {
+    name: "GitHub",
+    href: "https://github.com/rojanagunoori",
+    icon: "/assets/socials/github.svg", // make sure you have this icon in your assets
+  },
 ];
 
 export const experiences = [
