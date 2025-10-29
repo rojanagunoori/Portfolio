@@ -8,7 +8,7 @@ const HeroText = () => {
     visible: { opacity: 1, x: 0 },
   };
 
-  const cvLink = "https://drive.google.com/file/d/1fW5vaWMxLOT_QkXnRK1lje5zmu8fxRGh/view?usp=drive_link";
+  const cvLink = "https://drive.google.com/file/d/1zo9ZMSUjjHi4uy3FwJMruqA_8bgcUlJY/view?usp=drive_link"//"https://drive.google.com/file/d/1fW5vaWMxLOT_QkXnRK1lje5zmu8fxRGh/view?usp=drive_link";
 
   return (
     <div className="z-10 mt-20 text-center md:mt-40 md:text-left rounded-3xl bg-clip-text">
